@@ -14,7 +14,7 @@ def main():
     args = parser.parse_args()
 
     average = mean([run_request(args.url) for i in range(0, args.runs)])
-    print("{}ms for {} runs".format(str(average), str(args.runs)))
+    print("{}ms for {} runs".format(str(average * 1000), str(args.runs)))
 
 if __name__ == '__main__':
     main()
